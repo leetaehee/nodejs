@@ -5,7 +5,7 @@ const connect = () => {
         mongoose.set('debug', true);
     }
 
-    mongoose.connect('mongodb://계장비밀번호숨김처리@localhost:27017/admin', {
+    mongoose.connect('mongodb://lastride25:Ceman08079#@localhost:27017/admin', {
        dbname: 'nodejs',
        useNewUrlParser: true,
        useCreateIndex: true, 
