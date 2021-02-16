@@ -1,6 +1,6 @@
 .idea
-learn_express/uploads
-learn_express/.env
-learn_sequelize/.env
-learn_sequelize/config/config.json
-learn_mongoose/.env
+learn-express/uploads
+learn-express/.env
+learn-sequelize/.env
+learn-sequelize/config/config.json
+learn-mongoose/.env
