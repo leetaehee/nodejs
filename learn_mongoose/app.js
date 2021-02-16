@@ -2,11 +2,14 @@ const express = require('express');
 const path = require('path');
 const morgan = require('morgan');
 const nunjucks = require('nunjucks');
+const dotenv = require('dotenv');
 
 const connect = require('./schemas');
 const indexRouter = require('./routes');
 const userRouter = require('./routes/users');
 const commentsRouter = require('./routes/comments');
+
+dotenv.config();
 
 const app = express();
 app.set('port', process.env.PORT || 3002);

@@ -3,3 +3,4 @@ learn-express/uploads
 learn-express/.env
 learn-sequelize/.env
 learn-sequelize/config/config.json
+learn-mongoose/.env
