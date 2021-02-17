@@ -14,7 +14,7 @@ const connect = () => {
         mongoose.set('debug', true);
     }
 
-    mongoose.connect(`mongodb://${dbUser}:${dbPassword}@${dbHost}:${dbPort}/nodejs`, {
+    mongoose.connect(`mongodb://${dbUser}:${dbPassword}@${dbHost}:${dbPort}/admin`, {
        dbName: dbName,
        useNewUrlParser: true,
        useCreateIndex: true, 
