@@ -17,7 +17,6 @@ const connect = () => {
     mongoose.connect(`mongodb://${dbUser}:${dbPassword}@${dbHost}:${dbPort}/admin`, {
        dbName: dbName,
        useNewUrlParser: true,
-       useCreateIndex: true, 
     }, (error) => {
         if (error) {
             console.log('몽고디비 연결 에러', error);
