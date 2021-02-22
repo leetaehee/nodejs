@@ -7,3 +7,4 @@ learn-mongoose/.env
 nodebird/.env
 nodebird/config/config.json
 nodebird/node_modules
+nodebird/uploads
