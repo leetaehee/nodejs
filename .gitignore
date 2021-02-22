@@ -8,3 +8,5 @@ nodebird/.env
 nodebird/config/config.json
 nodebird/node_modules
 nodebird/uploads
+nodebird-api/.env
+nodebird-api/config/config.json
