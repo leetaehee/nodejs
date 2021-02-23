@@ -10,3 +10,5 @@ nodebird/node_modules
 nodebird/uploads
 nodebird-api/.env
 nodebird-api/config/config.json
+nodebirdcat/.env
+nodebirdcat/node_modules
