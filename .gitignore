@@ -13,3 +13,5 @@ nodebird-api/config/config.json
 nodebird-api/node_modules
 nodebirdcat/.env
 nodebirdcat/node_modules
+gif-chat/node_modules
+gif-chat/.env
