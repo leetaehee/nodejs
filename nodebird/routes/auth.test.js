@@ -37,11 +37,11 @@ describe('POST /join', () => {
         agent
         .post('/auth/join')
         .send({
-            email: 'zerohch10@gmail.com',
+            email: 'zerohch0@gmail.com',
             nick: 'zerocho1',
             password: 'nodejsbook',
         })
-        //.expect('Location', `/?error=${message}`)
+        .expect('Location', `/?error=${message}`)
         .expect(302, done);
     });
 });
