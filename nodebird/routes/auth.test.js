@@ -33,7 +33,7 @@ describe('POST /join', () => {
     });
 
     test('이미 로그인 했으면 redirect /', (done) => {
-        const message = encodeURIComponent('로그인 한 상태입니다.');
+        const message = encodeURIComponent('로그인한 상태입니다.');
         agent
         .post('/auth/join')
         .send({
