@@ -8,7 +8,6 @@ const connect = () => {
     if (NODE_ENV !== 'production') {
         mongoose.set('debug', true);
     }
-    console.log(`dbname: ${MONGO_DB}`);
     mongoose.connect(MONGO_URL, { 
         dbName: MONGO_DB,
         useNewUrlParser: true,
