@@ -21,6 +21,7 @@ nunjucks.configure('views', {
 });
 connect();
 
+
 const sessionMiddleware = session({
     resave: false,
     saveUninitialized: false,
@@ -43,6 +44,7 @@ app.use((req, res, next) => {
         const colorHash = new ColorHash();
         req.session.color = colorHash.hex(req.sessionID);
     }
+    next();
 });
 
 app.use('/', indexRouter);
