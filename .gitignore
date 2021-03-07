@@ -16,3 +16,6 @@ nodebirdcat/node_modules
 gif-chat/node_modules
 gif-chat/.env
 gif-chat/uploads
+node-auction/config/config.json
+node-auction/.env
+node-auction/uploads
