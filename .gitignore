@@ -19,3 +19,4 @@ gif-chat/uploads
 node-auction/config/config.json
 node-auction/.env
 node-auction/uploads
+node-auction/node_modules
