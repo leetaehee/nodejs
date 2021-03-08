@@ -1,11 +1,13 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
+const readline = require('readline');
 
-const type = process.argv[2];
-const name = process.argv[3];
-const directory = process.argv[4] || '.';
-const htmlTemplate = `
+let r1;
+let type = process.argv[2];
+let name = process.argv[3];
+let directory = process.argv[4] || '.';
+let htmlTemplate = `
 <!DOCTYPE html>
 <html>
     <head>
@@ -20,7 +22,7 @@ const htmlTemplate = `
 </html>
 `;
 
-const routerTemplate = `
+let routerTemplate = `
 const express = require('express);
 const router = express.Router();
 
@@ -81,9 +83,41 @@ const makeTemplate = () => { // 템플릿 생성 함수
     }
 };
 
+const dirAnswer = (answer) => { // 경로 설정 
+    directory = (answer && answer.trim()) || '.';
+    r1.close();
+    makeTemplate();
+};
+
+const nameAnswer = (answer) => { // 파일명 설정
+    if (!answer || !answer.trim()) {
+        console.clear();
+        console.log('name을 반드시 입력하셔야 합니다.');
+        return r1.question('파일명을 설정하세요. ', nameAnswer);
+    }
+
+    name = answer;
+    return r1.question('저장할 경로를 설정하세요. (설정하지 않으면 현재 경로) ',dirAnswer);
+};
+
+const typeAnswer = (answer) => { // 템플릿 종류 설정 
+    if (answer !== 'html' && answer !== 'express-router') {
+        console.clear();
+        console.log('html 또는 express-router만 지원합니다.');
+        return r1.question('어떤 템플릿을 필요하십니까? ', typeAnswer);
+    }
+    type = answer;
+    return r1.question('파일명을 설정하세요. ', nameAnswer);
+};
+
 const program = () => {
     if (!type || !name) {
-        console.error('사용 방법: cli html|express-router 파일명 | [생성 경로]');
+        r1 = readline.createInterface({
+           input: process.stdin,
+           output: process.stdout, 
+        });
+        console.clear();
+        r1.question('어떤 템플릿이 필요하십니까? ', typeAnswer);
     } else {
         makeTemplate();
     }
