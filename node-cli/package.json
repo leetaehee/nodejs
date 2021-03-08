@@ -5,7 +5,7 @@
     "main": "index.js",
     "author": "LeeTaeHee",
     "license": "ISC",
-    "bin": { 
-        "cli": "./index.js"
+    "bin": {
+        "cli": "./template.js"
     }
 }
