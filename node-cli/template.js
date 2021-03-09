@@ -23,7 +23,7 @@ let htmlTemplate = `
 `;
 
 let routerTemplate = `
-const express = require('express);
+const express = require('express');
 const router = express.Router();
 
 router.get('/', (req, res, next) => {
@@ -93,6 +93,7 @@ const nameAnswer = (answer) => { // 파일명 설정
     if (!answer || !answer.trim()) {
         console.clear();
         console.log('name을 반드시 입력하셔야 합니다.');
+  
         return r1.question('파일명을 설정하세요. ', nameAnswer);
     }
 
