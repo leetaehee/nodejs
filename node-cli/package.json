@@ -6,7 +6,7 @@
     "author": "LeeTaeHee",
     "license": "ISC",
     "bin": {
-        "cli": "./command.js"
+        "cli": "command.js"
     },
     "dependencies": {
         "chalk": "^4.1.0",
