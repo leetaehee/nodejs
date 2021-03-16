@@ -3,6 +3,7 @@
 {% block content %}
   <div class="timeline">
     <form id="join-form" action="/auth/join" method="post">
+      <input type="hidden" id="_csrf" name="_csrf" value="{{csrfToken}}"> 
       <div class="input-group">
         <label for="join-email">이메일</label>
         <input id="join-email" type="email" name="email"></div>
