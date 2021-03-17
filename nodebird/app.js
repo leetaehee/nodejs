@@ -6,7 +6,6 @@ const session = require('express-session');
 const nunjucks = require('nunjucks');
 const dotenv = require('dotenv');
 const passport = require('passport');
-const logger = require('./logger');
 
 dotenv.config();
 const pageRouter = require('./routes/page');
@@ -15,6 +14,7 @@ const postRouter = require('./routes/post');
 const userRouter = require('./routes/user');
 const { sequelize } = require('./models');
 const passportConfig = require('./passport');
+const logger = require('./logger');
 
 const app = express();
 passportConfig();
