@@ -29,7 +29,8 @@
     "pm2": "^4.5.5",
     "sanitize-html": "^2.3.2",
     "sequelize": "^6.5.0",
-    "sequelize-cli": "^6.2.0"
+    "sequelize-cli": "^6.2.0",
+    "winston": "^3.3.3"
   },
   "devDependencies": {
     "artillery": "^1.6.2",

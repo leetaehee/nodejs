@@ -6,6 +6,7 @@ const session = require('express-session');
 const nunjucks = require('nunjucks');
 const dotenv = require('dotenv');
 const passport = require('passport');
+const logger = require('./logger');
 
 dotenv.config();
 const pageRouter = require('./routes/page');
@@ -69,6 +70,8 @@ app.use('/user', userRouter);
 app.use((req, res, next) => {
     const error = new Error(`${req.method} ${req.url} 라우터가 없습니다.`);
     error.status = 404;
+    logger.info('hello');
+    logger.error(error.message);
     next(error)
 });
 

@@ -7,6 +7,8 @@ learn-mongoose/.env
 nodebird/.env
 nodebird/node_modules
 nodebird/uploads
+nodebird/combined.log
+nodebird/error.log
 nodebird-api/.env
 nodebird-api/node_modules
 nodebirdcat/.env
