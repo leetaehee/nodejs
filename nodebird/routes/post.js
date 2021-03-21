@@ -51,8 +51,16 @@ const upload = multer({
 
 router.post('/img', isLoggedIn, upload.single('img'), (req, res) => {
     console.log(req.file);
+    /** multer */
     //res.json({ url: `/img/${req.file.filename}` });
-    res.json({ url: req.file.location });
+    
+    /** multer-s3 */
+    //res.json({ url: req.file.location });
+
+    /** multer-s3 lamda */
+    const originalUrl = req.file.location;
+    const url = originalUrl.replace(/\/original\//, '/thumb/');
+    res.json({ url, originalUrl });
 });
 
 const upload2 = multer();
