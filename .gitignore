@@ -21,3 +21,4 @@ node-auction/.env
 node-auction/uploads
 node-auction/node_modules
 node-cli/node_modules
+aws-upload/node_modules
